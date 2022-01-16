@@ -94,10 +94,12 @@ header{
 
 .play-list{
     column-gap: 15px;
+    justify-content: center;
 }
 
 .play-list-item{
     margin-bottom: 50px;
+    width: 240px;
 }
 
 .menu-item img{
@@ -141,6 +143,23 @@ header{
     }
 }
 
+@media screen and (min-width: 800px) and (max-width: 1139px){
+    .play-list-item{
+        width: 32%;
+    }
+}
+
+@media screen and (min-width: 510px) and (max-width: 799px){
+    .play-list-item{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 509px){
+    .play-list-item{
+        width: 98%;
+    }
+}
 
 
 
