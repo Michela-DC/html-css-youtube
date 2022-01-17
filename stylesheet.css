@@ -75,6 +75,8 @@ header{
 
 .main-container{
     padding: 0;
+    overflow: hidden;
+    /* così si risolve problema che restringendo un top il main si restringeva più del main container */
 }
 
 .categories-wrapper{
@@ -111,6 +113,10 @@ header{
     width: 240px;
 }
 
+.card-header{
+    position: relative;
+}
+
 .menu-item img{
     margin: auto;
 }
@@ -122,9 +128,14 @@ header{
     .side-bar{
         width: 70px;
         overflow: hidden;
+        padding: 0;
     }
 
-    .iscrizioni, .altro, .settings, .cronologia, .my-videos, .watch-later{
+    .iscrizioni, .altro, .settings{
+        display: none;
+    }
+
+    .widget:nth-child(2) li:not(:first-child){
         display: none;
     }
 
@@ -133,12 +144,14 @@ header{
         padding: 0;
     }
 
-    .menu-item > div:nth-child(2){
-        display: none;
+    .menu-item{
+        display: flex;
+        flex-direction: column;
     }
 
     .menu-item{
         padding: 10px 0;
+        font-size: 12px;
     }
 
     .menu-item .icon{
@@ -186,6 +199,11 @@ header{
         width: 98%;
     }
 
+    header{
+        padding-right: 0;
+        padding-left: 20px;
+    }
+
     .input-wrapper{
         border: none;
         justify-content: flex-end;
@@ -198,6 +216,7 @@ header{
     .input-wrapper i{
         border: none;
         background-color: white;
+        padding-right: 22px;
     }
 
     .voice-search{
@@ -210,7 +229,7 @@ header{
 
 /* DEBUG */
 
-header{
+/* header{
     border: 2px solid red;
 }
 
@@ -224,9 +243,9 @@ main{
 
 .main-container{
     border: 2px solid blue;
-} */
+} 
 
 
  .open-side-bar, .search-bar{
     border: 2px solid yellowgreen;
-}
+} */
